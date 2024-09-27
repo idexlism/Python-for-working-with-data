@@ -14,19 +14,19 @@ def small(directory: Path):
         for file in small_files:
             print(file) #вывод файлов
 
-    small_dir = directory / 'small'
+    small_dir = directory / 'small' #Создаем путь для новой папки 'small'
     small_dir.mkdir(exist_ok=True)
     for file in small_files:
-        shutil.copy(file, small_dir)
+        shutil.copy(file, small_dir) # копируем файлы в папку 'small'
     print(f"files save in: {small_dir}")
 
 def check_files_in_directory(dirpath: Path, files):
-    present_files = []
-    absent_files = []
+    present_files = [] #найденные файлы
+    absent_files = [] #отсутствующие файлы
 
     for filename in files:
         file_path = dirpath / filename
-        if file_path.exists():
+        if file_path.exists(): # проверяем, существует ли файл
             present_files.append(filename)
         else:
             absent_files.append(filename)
@@ -54,11 +54,11 @@ def check_files_in_directory(dirpath: Path, files):
 
 
 def create_missing_files_from_list(missing_files_path: Path, target_directory: Path):
-    with open(missing_files_path, 'r') as file:
-        missing_files = file.read().splitlines()
+    with open(missing_files_path, 'r') as file: # открываем файл со списком отсутствующих файлов
+        missing_files = file.read().splitlines() # читаем содержимое и сохраняем в список
 
-    for filename in missing_files:
-        file_path = target_directory / filename
+    for filename in missing_files: # проходимся по каждому файлу
+        file_path = target_directory / filename # создаем полный путь к файлу
         if not file_path.exists():
-            file_path.touch()  # Создает пустой файл
+            file_path.touch()  # создает пустой файл
             print(f"Создан файл: {file_path}")
