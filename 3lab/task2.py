@@ -31,7 +31,7 @@ def histogram_matplot(pic):
     plt.xlim([0, 255])
 
     # Настройка общего заголовка и отображение
-    plt.suptitle('Гистограмма цветовых каналов изображения')
+    plt.suptitle('Гистограмма цветовых каналов изображения 1')
     plt.tight_layout()
     plt.show()
 
@@ -65,10 +65,10 @@ def histogram_skimage(pic):
         plt.title('Синий канал')
         plt.xlim([0, 255])
 
-    plt.suptitle('Гистограмма цветовых каналов изображения')
+    plt.suptitle('Гистограмма цветовых каналов изображения 2')
     plt.tight_layout()
     plt.show()
 
 pict = 'dog.jpg'
 histogram_matplot(pict)
-histogram_matplot(pict)
+histogram_skimage(pict)
