@@ -1,0 +1,39 @@
+{
+    "movies": [
+      {
+        "title": "Zhmurki",
+        "cast": [
+          {
+            "name": "Dmitry",
+            "role": "Simon"
+          },
+          {
+            "name": "Alexei",
+            "role": "Sergei"
+          },
+          {
+            "name": "Grigory",
+            "role": "Baklazhan"
+          }
+        ]
+      },
+      {
+        "title": "Reservoir Dogs",
+        "year": 1991,
+        "cast": [
+          {
+            "name": "Michael Madsen",
+            "role": "Mr. Blonde"
+          },
+          {
+            "name": "Steve Buscemi",
+            "role": "Mr. Pink"
+          },
+          {
+            "name": "Tim Roth",
+            "role": "Mr. Orange"
+          }
+        ]
+      }
+    ]
+  }
